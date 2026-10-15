@@ -477,7 +477,7 @@ app.get('/api/health', (_req, res) => {
 
 // Start Full-stack Express with Vite
 async function startServer() {
-  const PORT = 3000;
+  const PORT = Number(process.env.PORT) || 3000;
   const isProd = process.env.NODE_ENV === 'production';
 
   if (!isProd) {
